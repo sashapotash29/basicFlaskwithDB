@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		<title> Best Friends List</title>
+		<link rel="stylesheet" href="../static/css/home.css">
+	</head>
+
+
+	<body>
+		<h1> Best Friends </h1>
+		<h3> My best friends are: </h3>
+		<ul id="friendsList">
+			{% for i in list_of_friends %}
+
+			<li>{{i.name}}</li>
+
+			{% endfor %}
+			
+		</ul>
+		
+		<form>
+			<input id="newFriend" type="text" placeholder="New Friend goes here" required>
+			<input type="submit" value="Welcome" id="submitButton">
+		</form>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="../static/js/home.js"></script>
+	</body>
+
+</html>
